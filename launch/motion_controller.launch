@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="motion_controller" type="motion_controller_node" name="motion_controller" output="screen" >
+  	<rosparam file="$(find motion_controller)/config/params.yaml" command="load"/>
+  </node>
+  
+  <node pkg="twist_mux" type="twist_mux_node" name="twist_mux" output="screen" />
+  
+  <node pkg="tf2_ros" type="static_transform_publisher" name="footprint_pub" args="0 0 -0.4191 0 0 0 base_link base_footprint"/>
+  
+</launch>

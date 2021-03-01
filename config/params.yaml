@@ -1,0 +1,20 @@
+canbus_nodeid_left: 0x26
+canbus_nodeid_right: 0x27
+
+max_rpm: 3000
+min_rpm: 300
+
+wheel_separation: 1.57
+wheel_radius: 0.4191
+gearbox_ratio: 62.59
+
+# clamp linear and angular velocities
+limit_velocities: false
+max_linear_velocity: 1.5
+max_angular_velocity: 0.9
+
+# Valid for steering only. depending on the cmd_vel message, a wheel might change its direction which is not ideal for large robots
+prevent_wheel_direction_change: true
+
+# allow the velocity of the inner wheel to be close to zero
+prevent_tiny_inner_wheel_speed: true
